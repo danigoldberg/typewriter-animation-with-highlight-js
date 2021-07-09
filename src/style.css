@@ -1,0 +1,47 @@
+body {
+  font-family: system-ui;
+  background: #f0ebfc;
+}
+
+#code {
+  white-space: pre; /* So the code won't wrap */
+  width: 600px;
+  height: 300px;
+  margin-left: auto;
+  margin-right: auto;
+  overflow-x: auto;
+  overflow-y: auto;
+  visibility: hidden;
+}
+
+/* Hiding the scrollbars */
+
+/* Chrome, Safari and Opera */
+#code::-webkit-scrollbar {
+    display: none;
+}
+#code {
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;  /* Firefox */
+}
+
+/* Blinking cursor */
+#code:after{
+    content: "|";
+    animation: blink 500ms linear infinite alternate;
+}
+
+@-webkit-keyframes blink{
+    0%{opacity: 0;}
+    100%{opacity: 1;}
+}
+
+@-moz-keyframes blink{
+    0%{opacity: 0;}
+    100%{opacity: 1;}
+}
+
+@keyframes blink{
+    0%{opacity: 0;}
+    100%{opacity: 1;}
+}
